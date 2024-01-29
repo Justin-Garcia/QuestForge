@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS task_db;
-CREATE DATABASE task_db;
+DROP DATABASE IF EXISTS questForge_db;
+CREATE DATABASE questForge_db;

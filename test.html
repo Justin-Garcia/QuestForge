@@ -62,10 +62,19 @@
           </li>
           <li>
             <a href=""
-              ><img class="nav-icon" id="profile-icon" src="./public/images/profile.png" alt=""
+              ><img
+                class="nav-icon"
+                id="profile-icon"
+                src="./public/images/profile.png"
+                alt=""
             /></a>
           </li>
         </ul>
+        <div class="options">
+            <h4>USER</h4>
+          <h5 id="settings">Settings</h5>
+          <h5 id="logout">Logout</h5>
+        </div>
       </div>
       <div class="viewCard card1">
         <div class="viewCard-inner">
@@ -86,10 +95,16 @@
       <dialog class="questModal">
         <div class="dialog-header"><h3>FORGE A QUEST</h3></div>
         <form method="dialog">
-          <input type="text" class="questType" placeholder="Type [FEATURE IS UNAVAILABLE]"/> <!--Change to Dropdown Menu-->
           <input
             type="text"
-            class="questForm" placeholder="Enter Your Quest Here..."
+            class="questType"
+            placeholder="Type [FEATURE IS UNAVAILABLE]"
+          />
+          <!--Change to Dropdown Menu-->
+          <input
+            type="text"
+            class="questForm"
+            placeholder="Enter Your Quest Here..."
           />
         </form>
         <button class="saveQuest" type="submit">

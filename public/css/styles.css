@@ -26,7 +26,9 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
   font-family: "Press Start 2P", sans-serif;
 }
 
@@ -176,6 +178,23 @@ button#signin {
   margin-top: 18rem;
 }
 
+.options {
+  cursor: pointer;
+  background-color: var(--primary);
+  text-align: center;
+  color: white;
+
+  /* display: none; */
+}
+
+.options:hover {
+  display: block;
+}
+
+.options > h5:hover {
+  background-color: var(--quadriery);
+  padding-block: 0.5rem;
+}
 
 /* ------------------------------HOMEPAGE STYLING------------------------------ */
 
@@ -237,15 +256,17 @@ button#signin {
 
 /*------------------------------MODAL STYLING------------------------------ */
 
+.questModal [open] {
+  display: flex;
+}
+
 .questModal {
   border: 0.75rem solid var(--tertiary);
   border-radius: var(--rounded-square);
   text-align: center;
-  display: flex;
   flex-direction: column;
   max-width: 40rem;
   background-color: var(--background);
-  transform: translateY(30%);
 }
 
 .dialog-header {
@@ -254,8 +275,9 @@ button#signin {
   background-color: var(--tertiary);
   color: var(--secondary);
   width: 42.1rem;
+  padding-block: 1.5rem;
   margin-left: -16px;
-  margin-top: -20px;
+  margin-top: -2rem;
 }
 
 .questModal > form > p {
@@ -276,13 +298,11 @@ button#signin {
 .questType {
   /* User Quest Type Styling*/
   height: 4rem;
-
 }
 
 .questForm {
   /* User Quest Input Styling*/
   height: 10rem;
-
 }
 
 .questModal > form > input::placeholder {

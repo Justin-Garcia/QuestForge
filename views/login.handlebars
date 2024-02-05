@@ -1,26 +1,47 @@
- <div class="login-page">
-      <div class="heading">
-        <h1>QUEST FORGE</h1>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <a href=""
-            ><button class="signup" data-type="selected">SIGN UP</button></a
-          >
-          <a href=""><button class="signin">SIGN IN</button></a>
-        </div>
-        <div class="card-body">
-          <label for="fName" class="form-input">First Name</label
-          ><input type="text" id="fName" class="form-input" />
-          <label for="lName" class="form-input">Last Name</label
-          ><input type="text" id="lName" class="form-input" />
-          <label for="email" class="form-input">Email</label
-          ><input type="text" id="email" class="form-input" />
-          <label for="password" class="form-input">Password</label
-          ><input type="password" id="password" class="form-input" />
-        </div>
-        <div class="card-footer">
-          <button type="submit">LOGIN</button>
-        </div>
-      </div>
+<div class="login-page">
+  <div class="heading">
+    <h1>QUEST FORGE</h1>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <a href=""><button class="signup" data-type="selected">SIGN UP</button></a>
+      <a href=""><button class="signin">SIGN IN</button></a>
     </div>
+    <div class="card-body"><form id="signup-form"><label
+          for="fName"
+          class="form-input"
+        >First Name</label><input type="text" id="fName" class="form-input" />
+        <label for="lName" class="form-input">Last Name</label><input
+          type="text"
+          id="lName"
+          class="form-input"
+        />
+        <label for="email" class="form-input">Email</label><input
+          type="text"
+          id="signup-email"
+          class="form-input"
+        />
+        <label for="password" class="form-input">Password</label><input
+          type="password"
+          id="signup-password"
+          class="form-input"
+        /></form>
+      {{!-------------------- Sign In Form --------------------}}
+      <form id="signin-form">
+        <label for="email" class="form-input">Email</label><input
+          type="text"
+          id="signin-email"
+          class="form-input"
+        />
+        <label for="password" class="form-input">Password</label><input
+          type="password"
+          id="signin-password"
+          class="form-input"
+        /></form>
+
+    </div>
+    <div class="card-footer">
+      <button type="submit">LOGIN</button>
+    </div>
+  </div>
+</div>

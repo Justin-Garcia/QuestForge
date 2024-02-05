@@ -162,7 +162,20 @@ button#signin {
 .nav-icon {
   height: 4rem;
   width: 4rem;
+  transform: translateX(-5px);
+  background-color: var(--foreground);
+  border-radius: var(--rounded-border);
+  margin-bottom: 2rem;
 }
+
+.nav-icon:hover {
+  background-color: var(--tertiary);
+}
+
+#profile-icon {
+  margin-top: 18rem;
+}
+
 
 /* ------------------------------HOMEPAGE STYLING------------------------------ */
 

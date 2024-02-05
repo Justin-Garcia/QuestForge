@@ -1,4 +1,5 @@
-/* Global Style Components */
+/* ------------------------------Global Style Components------------------------------ */
+
 :root {
   /* colors */
   --primary: hsl(204, 77%, 57%); /* Pixelated Blue */
@@ -13,6 +14,7 @@
   --rounded-border: 100px;
   --rounded-left: 100px 0 0 100px;
   --rounded-right: 0 100px 100px 0;
+  --rounded-square: 24px;
 }
 
 body {
@@ -20,8 +22,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  justify-content: center;
-  display: flex;
 }
 
 h1,
@@ -30,17 +30,20 @@ h3 {
   font-family: "Press Start 2P", sans-serif;
 }
 
-/* LOGIN PAGE STYLING */
-.heading > h1 {
+h1 {
   font-size: 5rem;
+}
+
+/* ------------------------------LOGIN PAGE STYLING------------------------------ */
+.login-page {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-inline: 17.31298rem;
 }
 
 button {
   font-family: "Press Start 2P", sans-serif;
-  height: 4rem;
-  width: 15rem;
-  font-size: 2rem;
-  margin-top: 20px;
   border: none;
 }
 
@@ -49,11 +52,10 @@ button:hover {
 }
 
 .card {
-  width: 50rem;
+  width: 55rem;
   height: fit-content;
   background-color: var(--background);
   border-radius: 24px;
-  /* box-shadow: 5px 10px 5px 5px; */
   padding-bottom: 20px;
   margin: 0;
 }
@@ -63,9 +65,14 @@ button:hover {
   justify-content: center;
 }
 
-.card-header > a > button {
+.card-header > a > button,
+.card-footer > button {
   background-color: var(--foreground);
   color: var(--black);
+  height: 4rem;
+  width: 20rem;
+  font-size: 2rem;
+  margin-top: 20px;
 }
 
 .card-header > a > button[data-type="selected"] {
@@ -73,14 +80,24 @@ button:hover {
   color: var(--secondary);
 }
 
-button.signup,
+button#signup,
 .card-body > label {
   border-radius: var(--rounded-left);
 }
 
-button.signin,
+button#signup {
+  text-align: left;
+  padding-left: 30px;
+}
+
+button#signin,
 .card-body > input {
   border-radius: var(--rounded-right);
+}
+
+button#signin {
+  text-align: right;
+  padding-right: 30px;
 }
 
 .card-body {
@@ -105,9 +122,14 @@ button.signin,
 .card-body > input {
   border: none;
   height: 3.4rem;
-  width: 30rem;
+  width: 35rem;
   margin-bottom: 20px;
   font-size: 1.5rem;
+}
+
+.signup {
+  /* Add Class through JS only when "signin" has the data-type = selected */
+  display: none;
 }
 
 .card-footer {
@@ -120,4 +142,150 @@ button.signin,
   background-color: var(--tertiary);
   color: var(--secondary);
   margin: 0;
+}
+/* ------------------------------NAVIGATION STYLING------------------------------ */
+.nav {
+  grid-area: nv; /* nav */
+  margin-right: 2rem;
+  width: 8rem;
+  background-color: var(--background);
+  border-radius: var(--rounded-square);
+  position: sticky;
+  position: -webkit-sticky;
+  max-height: 90vh;
+}
+
+.nav > ul {
+  list-style: none;
+}
+
+.nav-icon {
+  height: 4rem;
+  width: 4rem;
+}
+
+/* ------------------------------HOMEPAGE STYLING------------------------------ */
+
+.card1 {
+  grid-area: lc; /* left card */
+}
+.card2 {
+  grid-area: rc; /* right card */
+}
+.todo {
+  grid-area: ct; /* content */
+}
+
+.homepage {
+  margin: 20px 40px;
+  display: grid;
+  grid-template-areas:
+    "nv lc lc lc rc rc rc"
+    "nv ct ct ct ct ct ct"
+    "nv ct ct ct ct ct ct";
+}
+
+.viewCard {
+  width: 35rem;
+  height: 20rem;
+  background-color: var(--background);
+  text-align: center;
+  border-radius: var(--rounded-square);
+}
+
+.viewCard-inner {
+  margin-top: 9rem;
+}
+
+.viewCard-inner > h2 {
+  font-size: 3rem;
+}
+
+.todo {
+  background-color: var(--background);
+  width: 72rem;
+  margin-top: 2rem;
+  min-height: 100rem;
+  border-radius: var(--rounded-square);
+}
+
+#listArea > button {
+  border-radius: var(--rounded-border);
+  background-color: var(--tertiary);
+  position: sticky;
+  width: 3.4rem;
+  height: 3.4rem;
+}
+
+#listArea > button > img {
+  width: 2rem;
+  height: 2rem;
+}
+
+/*------------------------------MODAL STYLING------------------------------ */
+
+.questModal {
+  border: 0.75rem solid var(--tertiary);
+  border-radius: var(--rounded-square);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  background-color: var(--background);
+  transform: translateY(30%);
+}
+
+.dialog-header {
+  border-radius: 0 0 24px 24px;
+  font-size: 2rem;
+  background-color: var(--tertiary);
+  color: var(--secondary);
+  width: 42.1rem;
+  margin-left: -16px;
+  margin-top: -20px;
+}
+
+.questModal > form > p {
+  font-size: 2rem;
+}
+
+.questModal > form > input {
+  /*Input Field Styling*/
+  text-align: center;
+  margin: 2rem 0 0 0;
+  background-color: var(--foreground);
+  border-radius: var(--rounded-square);
+  border: none;
+  width: 28.5rem;
+  font-size: 1.5rem;
+}
+
+.questType {
+  /* User Quest Type Styling*/
+  height: 4rem;
+
+}
+
+.questForm {
+  /* User Quest Input Styling*/
+  height: 10rem;
+
+}
+
+.questModal > form > input::placeholder {
+  text-align: center;
+  font-style: italic;
+}
+
+.questModal > button {
+  border-radius: var(--rounded-border);
+  background-color: var(--tertiary);
+  position: sticky;
+  width: 3.4rem;
+  height: 3.4rem;
+}
+
+.questModal > button > img {
+  width: 2rem;
+  height: 2rem;
 }

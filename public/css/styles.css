@@ -47,6 +47,7 @@ h1 {
 button {
   font-family: "Press Start 2P", sans-serif;
   border: none;
+  cursor: pointer;
 }
 
 button:hover {
@@ -154,6 +155,8 @@ button#signin {
   border-radius: var(--rounded-square);
   position: sticky;
   position: -webkit-sticky;
+  top: 1rem;
+  align-self: start;
   max-height: 90vh;
 }
 
@@ -178,20 +181,20 @@ button#signin {
   margin-top: 18rem;
 }
 
-.options {
-  cursor: pointer;
+.options, .options > button {
+  /*--- Options Menu Styling ---*/
   background-color: var(--primary);
   text-align: center;
   color: white;
-
-  /* display: none; */
+  padding-block: 0.5rem;
+  z-index: 1;
 }
 
-.options:hover {
-  display: block;
+.options > button {
+  width: 13rem;
 }
 
-.options > h5:hover {
+.options > button:hover {
   background-color: var(--quadriery);
   padding-block: 0.5rem;
 }
@@ -226,20 +229,41 @@ button#signin {
 }
 
 .viewCard-inner {
-  margin-top: 9rem;
+  margin-top: 7rem;
 }
 
 .viewCard-inner > h2 {
   font-size: 3rem;
 }
 
+#xpBar {
+  width: 30rem;
+  height: 2.5rem;
+  background-color: green;
+  border: 3px dashed var(--black);
+  border-radius: var(--rounded-border);
+  transform: translateX(35px);
+}
+
 .todo {
   background-color: var(--background);
   width: 72rem;
   margin-top: 2rem;
-  min-height: 100rem;
+  min-height: 40rem;
   border-radius: var(--rounded-square);
 }
+#taskList {
+  list-style: none;
+}
+#taskList > li {
+  padding-block: 1rem;
+  background-color: var(--foreground);
+  border-radius: var(--rounded-border);
+  width: 60rem;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem;
+} 
 
 #listArea > button {
   border-radius: var(--rounded-border);
@@ -247,6 +271,9 @@ button#signin {
   position: sticky;
   width: 3.4rem;
   height: 3.4rem;
+  margin-top: .5rem;
+  margin-left: 68rem;
+
 }
 
 #listArea > button > img {
@@ -295,12 +322,12 @@ button#signin {
   font-size: 1.5rem;
 }
 
-.questType {
+#questType {
   /* User Quest Type Styling*/
   height: 4rem;
 }
 
-.questForm {
+#questForm {
   /* User Quest Input Styling*/
   height: 10rem;
 }
@@ -314,11 +341,12 @@ button#signin {
   border-radius: var(--rounded-border);
   background-color: var(--tertiary);
   position: sticky;
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: 35rem;
 }
 
 .questModal > button > img {
-  width: 2rem;
-  height: 2rem;
+  width: 2.8rem;
+  height: 2.8rem;
 }

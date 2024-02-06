@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}
+class Tasks extends Model {}
 
 Tasks.init(
   {
@@ -11,11 +11,8 @@ Tasks.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
     },
-    description: {
+   task: {
       type: DataTypes.STRING,
     },
     user_id: {

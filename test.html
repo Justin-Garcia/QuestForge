@@ -70,11 +70,11 @@
             /></a>
           </li>
         </ul>
-        <div class="options">
-            <h4>USER</h4>
-          <h5 id="settings">Settings</h5>
-          <h5 id="logout">Logout</h5>
-        </div>
+      </div>
+      <div class="options">
+        <h4>USER</h4>
+        <button><h5 id="settings">Settings</h5></button>
+        <button><h5 id="logout">Logout</h5></button>
       </div>
       <div class="viewCard card1">
         <div class="viewCard-inner">
@@ -90,6 +90,9 @@
           <button class="addTask">
             <img src="./public/images/add.png" alt="Add Task" />
           </button>
+          <ul id="taskList">
+            <li>Demonstrate the Project</li>
+          </ul>
         </div>
       </div>
       <dialog class="questModal">
@@ -97,13 +100,13 @@
         <form method="dialog">
           <input
             type="text"
-            class="questType"
+            id="questType"
             placeholder="Type [FEATURE IS UNAVAILABLE]"
           />
           <!--Change to Dropdown Menu-->
           <input
             type="text"
-            class="questForm"
+            id="questForm"
             placeholder="Enter Your Quest Here..."
           />
         </form>

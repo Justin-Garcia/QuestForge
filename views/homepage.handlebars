@@ -1,0 +1,74 @@
+ <div class="homepage">
+      <!-- Navigation Bar -->
+      <div class="nav">
+        <ul>
+          <li>
+            <a href=""
+              ><img class="nav-icon" src="./public/images/home.png" alt="Home"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img
+                class="nav-icon"
+                src="./public/images/calendar.png"
+                alt="Calendar"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="./public/images/add.png" alt="Add" class="nav-icon"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img
+                class="nav-icon"
+                id="profile-icon"
+                src="./public/images/profile.png"
+                alt=""
+            /></a>
+          </li>
+        </ul>
+        <div class="options">
+            <h4>USER</h4>
+          <h5 id="settings">Settings</h5>
+          <h5 id="logout">Logout</h5>
+        </div>
+      </div>
+      <div class="viewCard card1">
+        <div class="viewCard-inner">
+          <h2>LVL.<span id="userLevel">01</span></h2>
+          <div id="xpBar"></div>
+        </div>
+      </div>
+      <div class="viewCard card2">
+        <div class="viewCard-inner"><p>---FUTURE DEVELOPMENT NEEDED---</p></div>
+      </div>
+      <div class="todo">
+        <div id="listArea">
+          <button class="addTask">
+            <img src="./public/images/add.png" alt="Add Task" />
+          </button>
+        </div>
+      </div>
+      <dialog class="questModal">
+        <div class="dialog-header"><h3>FORGE A QUEST</h3></div>
+        <form method="dialog">
+          <input
+            type="text"
+            class="questType"
+            placeholder="Type [FEATURE IS UNAVAILABLE]"
+          />
+          <!--Change to Dropdown Menu-->
+          <input
+            type="text"
+            class="questForm"
+            placeholder="Enter Your Quest Here..."
+          />
+        </form>
+        <button class="saveQuest" type="submit">
+          <img src="./public/images/save.png" alt="Save" />
+        </button>
+      </dialog>
+    </div>
